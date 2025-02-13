@@ -18,12 +18,12 @@ public class Contact {
     }
 
     public String getInfoContact() {
-        return "Nom: " + getNom() + ", Numéro: " + getNumero();
+        return toString();
     }
     
     @Override
     public String toString() {
-        return getInfoContact();
+        return "Nom: " + getNom() + ", Numéro: " + getNumero();
     }
 }
 
