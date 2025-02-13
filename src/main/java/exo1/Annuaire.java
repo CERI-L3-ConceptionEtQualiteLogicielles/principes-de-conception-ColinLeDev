@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Annuaire implements ContactService {
-    private static List<Contact> lesContacts = new ArrayList<>();
-    
+    private List<Contact> lesContacts = new ArrayList<>();
+
     public void ajouteContact(Contact contact) {
         lesContacts.add(contact);
     }
