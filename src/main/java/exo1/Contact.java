@@ -25,7 +25,8 @@ public class Contact implements ContactService {
     public String getInfoContact() {
         return "Nom: " + getNom() + ", Numéro: " + getNumero();
     }
-
+    
+    // Service/Classe Annuaire ?
     public void ajouteContact(Contact contact) {
         lesContacts.add(contact);
     }
@@ -40,10 +41,11 @@ public class Contact implements ContactService {
         }
     }
 
-    public void sauvegardeEnBD() {
+    public void sauvegardeEnBD() { // Passer le dbService en arg ?
         // Logique pour sauvegarder les contacts dans une base de données
     }
 
+    // Classe/service BoiteMail
     public void envoiEmail(Contact contact, String message) {
         // Logique pour envoyer un email
     }
