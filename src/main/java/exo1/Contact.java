@@ -23,7 +23,7 @@ public class Contact {
     
     @Override
     public String toString() {
-        return "Nom: " + getNom() + ", Numéro: " + getNumero();
+        return getInfoContact();
     }
 }
 
