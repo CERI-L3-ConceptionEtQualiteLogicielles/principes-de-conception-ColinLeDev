@@ -4,10 +4,7 @@ public class Contact {
     private String nom;
     private String numero;
 
-    public Contact(String nom, String numero) {
-        this.nom = nom;
-        this.numero = numero;
-    }
+    private Contact() {    }
 
     public String getNom() {
         return nom;
@@ -24,6 +21,30 @@ public class Contact {
     @Override
     public String toString() {
         return "Nom: " + getNom() + ", Numéro: " + getNumero();
+    }
+
+    public static class ContactBuilder {
+        private String nom;
+        private String numero;
+
+        public ContactBuilder() {
+
+        }
+
+        public void setNom(String newName) {
+            this.nom = newName;
+        }
+
+        public void setNumero(String newNumero) {
+            this.numero = newNumero;
+        }
+
+        public Contact build() {
+            Contact contact = new Contact();
+            contact.nom = this.nom;
+            contact.numero = this.numero;
+            return contact;
+        }
     }
 }
 
