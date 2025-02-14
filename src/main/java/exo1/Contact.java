@@ -17,8 +17,8 @@ public class Contact {
         return numero;
     }
 
-    public String getInfoContact() {
-        return toString();
+    public String getInfoContact(ContactPrinter formatter) {
+        return formatter.infoContact(this);
     }
     
     @Override
